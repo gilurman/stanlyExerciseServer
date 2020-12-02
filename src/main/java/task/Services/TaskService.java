@@ -2,15 +2,15 @@ package task.Services;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import task.models.Task;
 import task.models.TaskType;
 import task.repositorys.TaskRepository;
 import task.repositorys.TaskTypeRepository;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class TaskService {
@@ -51,4 +51,5 @@ public class TaskService {
     public void deleteTaskType(String id) {
         taskTypeRepository.deleteById(id);
     }
+
 }

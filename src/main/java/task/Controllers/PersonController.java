@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import task.Services.PersonService;
 import task.models.Person;
+import task.models.Task;
+
 import java.util.List;
 
 @RequestMapping("/person")
@@ -33,5 +35,10 @@ public class PersonController {
     @DeleteMapping("/{id}")
     public void deleltePerson(@PathVariable String id) {
         service.deletePerson(id);
+    }
+
+    @GetMapping("/task/{id}")
+    public List<Task> getAllPersonTasks(@PathVariable String id) {
+        return service.getAllPersonTasks(id);
     }
 }

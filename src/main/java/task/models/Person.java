@@ -21,5 +21,5 @@ public class Person {
     private String city;
     private String department;
     private ReleaseType[] releases;
-    private  int points;
+    private int points;
 }
